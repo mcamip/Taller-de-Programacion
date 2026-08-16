@@ -1,0 +1,14 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.ejemplo'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Aquí agregarás las librerías o dependencias que necesites
+}
