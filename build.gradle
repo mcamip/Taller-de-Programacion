@@ -1,8 +1,9 @@
 plugins {
     id 'java'
+    id 'application'
 }
 
-group = 'com.ejemplo'
+group = 'com.umb.taller'
 version = '1.0-SNAPSHOT'
 
 repositories {
@@ -10,5 +11,24 @@ repositories {
 }
 
 dependencies {
-    // Aquí agregarás las librerías o dependencias que necesites
+
+    // JUnit 5 para pruebas unitarias
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.12.2'
+
+    // AssertJ para realizar aserciones más claras
+    testImplementation 'org.assertj:assertj-core:3.27.3'
+
+    // SLF4J para logging
+    implementation 'org.slf4j:slf4j-api:2.0.17'
+
+    // Implementación de logging para ejecutar el proyecto
+    runtimeOnly 'org.slf4j:slf4j-simple:2.0.17'
+}
+
+application {
+    mainClass = 'com.umb.taller.Main'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
 }
